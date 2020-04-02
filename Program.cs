@@ -19,10 +19,10 @@ namespace HomeworkTemplate
                         int aliveNeighborsCount = 0;
 
                         for (int ii = i - 1; ii <= i + 1; ii++)
-                            for (int jj = j - 1; jj <= j + 1; jj++)
+                            for (int jj = j - 1; jj <= j + 1; jj++) //for each neighbor
                                 if (ii >= 0 && ii < board.GetLength(0)
-                                    && jj >= 0 && jj < board.GetLength(1)
-                                    && !(ii == i && jj == j))
+                                    && jj >= 0 && jj < board.GetLength(1) // if in bounds
+                                    && !(ii == i && jj == j)) // if not center
                                     if (task.Board[ii, jj] == '1')
                                         ++aliveNeighborsCount;
 
